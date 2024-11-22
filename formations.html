@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations</title>
+    <title>Formations - Business en Ligne</title>
     <link rel="stylesheet" href="formations.css">
 </head>
 <body>
@@ -14,54 +14,56 @@
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="formations.html" class="active">Formations</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="formations-hero">
-        <div class="hero-text">
+    <main>
+        <section>
             <h2>Explorez Nos Formations</h2>
             <p>Transformez votre potentiel en expertise avec nos cours dédiés.</p>
-        </div>
-    </section>
+        </section>
 
-    <section class="formations-list">
-        <h2>Nos Thématiques</h2>
-        <div class="formations-grid">
-            <div class="formation-card" data-category="vente">
-                <h3>Vente de Domaines</h3>
-                <p>Apprenez les secrets pour acheter et vendre des noms de domaine à fort potentiel.</p>
-                <button class="details-btn">En savoir plus</button>
+        <section class="formations">
+            <h2>Nos Thématiques</h2>
+            <div class="formations-grid">
+                <div class="formation">
+                    <img src="domaine.PNG" alt="Vente de Domaines">
+                    <h3>Vente de Domaines</h3>
+                    <p>Apprenez les secrets pour acheter et vendre des noms de domaine à fort potentiel.</p>
+                    <a href="#" class="cta-button">En savoir plus</a>
+                </div>
+                <div class="formation">
+                    <img src="drop.PNG" alt="Dropshipping">
+                    <h3>Dropshipping</h3>
+                    <p>Découvrez comment créer une boutique en ligne sans gestion de stock.</p>
+                    <a href="#" class="cta-button">En savoir plus</a>
+                </div>
+                <div class="formation">
+                    <img src="trading.PNG" alt="Trading">
+                    <h3>Trading</h3>
+                    <p>Maîtrisez les bases du trading et adoptez des stratégies gagnantes.</p>
+                    <a href="#" class="cta-button">En savoir plus</a>
+                </div>
+                <div class="formation">
+                    <img src="crypto.PNG" alt="Crypto-monnaies">
+                    <h3>Crypto-monnaies</h3>
+                    <p>Plongez dans le monde des cryptos avec des conseils pratiques sur Ethereum, Bitcoin et plus.</p>
+                    <a href="#" class="cta-button">En savoir plus</a>
+                </div>
             </div>
-            <div class="formation-card" data-category="dropshipping">
-                <h3>Dropshipping</h3>
-                <p>Découvrez comment créer une boutique en ligne sans gestion de stock.</p>
-                <button class="details-btn">En savoir plus</button>
-            </div>
-            <div class="formation-card" data-category="trading">
-                <h3>Trading</h3>
-                <p>Maîtrisez les bases du trading et adoptez des stratégies gagnantes.</p>
-                <button class="details-btn">En savoir plus</button>
-            </div>
-            <div class="formation-card" data-category="crypto">
-                <h3>Crypto-monnaies</h3>
-                <p>Plongez dans le monde des cryptos avec des conseils pratiques sur Ethereum, Bitcoin et plus.</p>
-                <button class="details-btn">En savoir plus</button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 Formation Business Pro. Tous droits réservés. Par HAROUN SAMY.</p>
+        <p>© 2024 Formation Business Pro. Tous droits réservés. Par <span class="author">HAROUN SAMY</span>.</p>
         <ul>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">Politique de confidentialité</a></li>
         </ul>
     </footer>
-
-    <script src="formations.js"></script>
 </body>
 </html>
