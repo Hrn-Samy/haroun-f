@@ -194,3 +194,10 @@ footer ul li a {
 footer p .author {
     color: #7400b8;
 }
+
+.testimonials {
+    background-color: #0d0d2d; /* Même couleur que le fond principal */
+    color: #ffffff; /* Conserve un bon contraste pour le texte */
+    padding: 40px;
+    border-radius: 10px; /* Ajoute des coins arrondis pour un look moderne */
+}
