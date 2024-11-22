@@ -201,3 +201,31 @@ footer p .author {
     padding: 40px;
     border-radius: 10px; /* Ajoute des coins arrondis pour un look moderne */
 }
+
+header {
+    background-color: #0d0d2d; /* Même couleur que le fond principal */
+    color: #ffffff; /* Assure une bonne lisibilité pour le texte */
+    padding: 20px 0;
+}
+
+.hero {
+    background-color: #0d0d2d; /* Même couleur que le fond principal */
+    color: #00bfff; /* Texte en bleu clair pour un contraste élégant */
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero .cta-button {
+    background-color: #00bfff; /* Bouton en bleu clair */
+    color: #0d0d2d; /* Texte du bouton en couleur sombre */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero .cta-button:hover {
+    background-color: #007acc; /* Couleur plus foncée au survol */
+    color: #ffffff; /* Texte en blanc pour le hover */
+}
+
