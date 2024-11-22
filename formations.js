@@ -1,23 +1,39 @@
-// Ajout d'une animation pour les boutons "En savoir plus"
 document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll('.details-btn');
-    buttons.forEach(function (button) {
-        button.addEventListener('mouseenter', function () {
+    // Animation des boutons
+    const buttons = document.querySelectorAll('.details-btn');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
             button.style.transform = 'scale(1.1)';
             button.style.transition = 'transform 0.2s ease';
         });
-        button.addEventListener('mouseleave', function () {
+        button.addEventListener('mouseleave', () => {
             button.style.transform = 'scale(1)';
         });
     });
 
-    // Ajout d'un événement de clic sur les cartes de formation
-    var cards = document.querySelectorAll('.formation-card');
-    cards.forEach(function (card) {
-        card.addEventListener('click', function () {
-            var category = card.getAttribute('data-category');
-            console.log('Formation sélectionnée : ' + category);
-            alert('Formation sélectionnée : ' + category);
+    // Pop-up dynamique lors du clic sur une formation
+    const cards = document.querySelectorAll('.formation-card');
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const title = card.querySelector('h3').textContent;
+            const description = card.querySelector('p').textContent;
+            const popup = document.createElement('div');
+            popup.classList.add('popup');
+
+            popup.innerHTML = `
+                <div class="popup-content">
+                    <h2>${title}</h2>
+                    <p>${description}</p>
+                    <button class="close-btn">Fermer</button>
+                </div>
+            `;
+            document.body.appendChild(popup);
+
+            // Fermer la pop-up
+            const closeButton = popup.querySelector('.close-btn');
+            closeButton.addEventListener('click', () => {
+                popup.remove();
+            });
         });
     });
 });
