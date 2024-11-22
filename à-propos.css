@@ -134,3 +134,44 @@ footer ul li a {
 footer p .author {
     color: #7400b8;
 }
+
+/* Centrage du logo avec un espace équilibré */
+header .logo {
+    text-align: left; /* Le logo reste légèrement à gauche */
+    margin-left: 20px; /* Ajuste cette valeur pour un alignement optimal */
+    font-size: 24px; /* Taille adaptée pour le logo */
+}
+
+/* Centrage du menu de navigation */
+header nav ul {
+    display: flex;
+    justify-content: flex-end; /* Les liens sont poussés vers la droite */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-right: 20px; /* Réduit l'espacement vers l'extérieur */
+}
+
+header nav ul li {
+    margin: 0 10px; /* Espacement plus modéré entre les liens */
+}
+
+header nav ul li a {
+    color: #ffffff; /* Assure une bonne lisibilité */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Ajout de styles pour harmoniser le header */
+header {
+    display: flex;
+    justify-content: space-between; /* Place le logo et le menu à bonne distance */
+    align-items: center;
+    padding: 10px 20px; /* Uniformise l'espacement interne */
+    background-color: #1a1a2e; /* Couleur de fond pour contraster si besoin */
+}
