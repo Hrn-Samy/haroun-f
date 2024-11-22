@@ -1,13 +1,14 @@
-/* Import des polices */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
-
 /* Style global */
 body {
-    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
     color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
@@ -15,127 +16,104 @@ header {
     background-color: #333;
     color: #fff;
     padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
 }
 
-header .logo h1 {
+header h1 {
     margin: 0;
     font-size: 1.8rem;
 }
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+/* Section principale */
+main {
+    padding: 40px 20px;
+    flex: 1;
 }
 
-header nav ul li {
-    margin-left: 20px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Section Hero */
-.hero {
-    background-image: url('formations-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
     text-align: center;
+    color: #1a1a2e;
 }
 
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Section Formations */
-.formations {
-    padding: 60px 20px;
-    background-color: #fff;
+main p {
     text-align: center;
-}
-
-.formations h2 {
-    font-size: 2.5rem;
     margin-bottom: 30px;
+    color: #555;
 }
 
+/* Grille des formations */
 .formations-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 0 20px;
 }
 
 .formation-card {
-    background-color: #1a1a2e;
-    padding: 20px;
+    background-color: #0a192f;
+    color: #fff;
     border-radius: 10px;
-    color: #f1f1f1;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formation-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.formation-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .formation-card h3 {
-    margin-bottom: 10px;
+    background-color: #142850;
     color: #00d4ff;
+    margin: 0;
+    padding: 15px;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .formation-card p {
+    padding: 15px;
     font-size: 1rem;
-    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #ccc;
 }
 
-.details-btn {
-    background-color: #00d4ff;
-    color: #1a1a2e;
+.formation-card .details-btn {
+    display: block;
+    margin: 15px auto;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-transform: uppercase;
+    background-color: #00d4ff;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
 }
 
-.details-btn:hover {
+.formation-card .details-btn:hover {
     background-color: #7400b8;
-    color: #fff;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #1a1a2e;
+    color: #f1f1f1;
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #7400b8;
 }
