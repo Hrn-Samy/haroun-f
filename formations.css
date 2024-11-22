@@ -1,119 +1,147 @@
-/* Style global */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #1a1a2e;
+    color: #f1f1f1;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #fff;
-    padding: 15px 20px;
-    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header h1 {
-    margin: 0;
+header .logo h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
+    color: #00d4ff;
+    margin: 0;
 }
 
-/* Section principale */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00d4ff;
+}
+
 main {
-    padding: 40px 20px;
-    flex: 1;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 main h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #1a1a2e;
+    font-size: 2.5rem;
+    color: #00d4ff;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
 }
 
 main p {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #555;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 40px;
 }
 
 /* Grille des formations */
 .formations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 0 20px;
 }
 
-.formation-card {
+.formation {
     background-color: #0a192f;
-    color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
 }
 
-.formation-card:hover {
+.formation:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.formation-card h3 {
-    background-color: #142850;
-    color: #00d4ff;
-    margin: 0;
-    padding: 15px;
-    font-size: 1.2rem;
-    text-align: center;
+.formation img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.formation-card p {
-    padding: 15px;
+.formation h3 {
+    font-size: 1.8rem;
+    color: #7400b8;
+    margin-bottom: 10px;
+}
+
+.formation p {
     font-size: 1rem;
-    line-height: 1.5;
-    color: #ccc;
+    color: #e0e0e0;
+    margin-bottom: 15px;
 }
 
-.formation-card .details-btn {
-    display: block;
-    margin: 15px auto;
-    padding: 10px 20px;
+.formation .cta-button {
     background-color: #00d4ff;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
+    color: #1a1a2e;
+    padding: 10px 20px;
+    font-size: 1rem;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: fit-content;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.formation-card .details-btn:hover {
+.formation .cta-button:hover {
     background-color: #7400b8;
+    color: #fff;
+    box-shadow: 0px 5px 20px rgba(116, 0, 184, 0.4);
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a2e;
+    background-color: #0f0f1b;
+    padding: 20px;
     color: #f1f1f1;
     text-align: center;
-    padding: 15px 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: #00d4ff;
+    text-decoration: none;
     font-size: 0.9rem;
 }
 
-footer a {
-    color: #00d4ff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
+footer ul li a:hover {
     color: #7400b8;
 }
